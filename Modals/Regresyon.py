@@ -30,19 +30,18 @@ class Regresyon2():
             r = ('r') + str(index)
 
             if maxR < self.datas[key][r]:
-                self.selectedData = self.datas[key][r]
-
-        # r'ye gore x belirleyici
-        if self.datas['X1']['r1'] > self.datas['X2']['r2']:
-            self.selectedData = self.datas['X1']
-        else:
-            self.selectedData = self.datas['X2']
+                self.selectedData = self.datas[key]
+                maxR = self.datas[key][r]
 
     def regresyonGetSelectedData(self):
         return self.selectedData
 
     def bCalculator(self):
-        self.b = float("%.2f" % (((self.n * self.selectedData["sumOfXY"]) - (self.selectedData["sumOfX"] * self.datas['Y']["sumOfY"])) / (self.n * self.selectedData["sumSquareOfX"] - (self.selectedData["sumOfX"]) ** 2)))
+        try:
+            self.b = float("%.2f" % (((self.n * self.selectedData["sumOfXY"]) - (self.selectedData["sumOfX"] * self.datas['Y']["sumOfY"])) / (self.n * self.selectedData["sumSquareOfX"] - (self.selectedData["sumOfX"]) ** 2)))
+        except:
+            # 0'a bolunmeme durumunda b'yi 0'a esitledim
+            self.b = 0
 
     def aCalculator(self):
         print(self.datas['Y']['avgY'])

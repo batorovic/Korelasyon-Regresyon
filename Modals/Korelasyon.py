@@ -14,4 +14,9 @@ class Korelasyon2():
             self.datas[key][r] = float("%0.5f" % (self.korelasyonCalculator(key)))
 
     def korelasyonCalculator(self, key):
-        return (self.datas[key]['sumOfXY'] - self.n * self.datas[key]['avgX']*self.datas['Y']['avgY']) / math.sqrt((self.datas[key]['sumSquareOfX'] - self.n*self.datas[key]['avgSquareOfX']) * ((self.datas['Y']['sumSquareOfY'] - self.n*self.datas['Y']['avgSquareOfY'])))
+        # 0'a bolunememe durumu olabilir.
+        try:
+            return (self.datas[key]['sumOfXY'] - self.n * self.datas[key]['avgX']*self.datas['Y']['avgY']) / math.sqrt((self.datas[key]['sumSquareOfX'] - self.n*self.datas[key]['avgSquareOfX']) * ((self.datas['Y']['sumSquareOfY'] - self.n*self.datas['Y']['avgSquareOfY'])))
+        except:
+            print("XXXXXXXXXXXXX")
+            return 0
