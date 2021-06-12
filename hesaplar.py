@@ -7,11 +7,6 @@ from Modals.SumOfSquaredError import SSE2
 
 
 def printDatas(dataDict):
-    # for key, data in self.dataDict.items():
-    #     print(key)
-    #     for attribute, value in data.items():
-    #         print('{} : {}'.format(attribute, value))
-
     for key, value in dataDict.items():
         print('{} : {}'.format(key, value))
 

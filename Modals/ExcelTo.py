@@ -7,7 +7,7 @@ class ExcelTo:
         self.liste = []
 
     def readDataFromExcel(self):
-        self.dataFrame = pd.read_excel(r"veriSeti2.xlsx", keep_default_na=False)
+        self.dataFrame = pd.read_excel(r"vertiSetiReal.xlsx", keep_default_na=False)
         # Excel dosyasini scriptin oldugu yerden direkt okumaktadir.
         # return self.dataFrame
 

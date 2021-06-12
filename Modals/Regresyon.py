@@ -24,6 +24,7 @@ class Regresyon2():
 
     def regresyonDecider(self):
         maxR = self.datas['X1']['r1']  # en kötu zaten 1 zate x1 olacak o yuzden x1'i baslangicta max olarak alıyorum
+        self.selectedData = self.datas['X1']
 
         for index in range(1, self.columnCount - 1):
             key = ('X' + str(index))
