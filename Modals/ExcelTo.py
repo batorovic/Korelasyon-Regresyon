@@ -7,14 +7,13 @@ class ExcelTo:
         self.liste = []
 
     def readDataFromExcel(self):
-        self.dataFrame = pd.read_excel(r"vertiSetiReal.xlsx", keep_default_na=False)
+        self.dataFrame = pd.read_excel(r"veriSeti.xlsx", keep_default_na=False)
         # Excel dosyasini scriptin oldugu yerden direkt okumaktadir.
-        # return self.dataFrame
 
         # excelden columnlari okuyunca bos olan columnlar unnamed olarak geliyor onlari silme islemi.
-        # print(self.dataFrame.columns)
         self.dataFrame = self.dataFrame.loc[:, ~self.dataFrame.columns.str.contains('^Unnamed')]
 
+    # excel'den okunan verileri listeye cevirme islemi
     def convertToList(self, data):
         self.liste = []
 
@@ -24,3 +23,6 @@ class ExcelTo:
             else:
                 self.liste.append(item)
         return self.liste
+
+    def getColumnCount(self):
+        return len(self.dataFrame.columns)

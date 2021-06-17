@@ -1,6 +1,7 @@
+# Korelasyon, regresyon islemlerinde lazim olacak degerlerin hesaplanmasini saglayan fonksiyonlari barindiran class
 class Formulas():
     def __init__(self):
-        self._n = 0  # hepsinin uzunlugu aynı olacagi icin 1 tanesinin lenini almak yeterli.
+        self._n = 0
         self.datas = {}
 
     @property
