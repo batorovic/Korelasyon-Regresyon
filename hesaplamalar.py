@@ -23,7 +23,7 @@ Scripti cmd uzerinden calistirmak isterseniz:
 
 Dosyayi cikardiginiz yerde cmd aciniz. Ve asagidaki satiri yaziniz.
 
-py 191213086_Ist_ve_Iht_Odev2.py
+py hesaplamalar.py
 
 """
 
